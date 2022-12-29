@@ -28,8 +28,7 @@ public class CategoryResource {
 
     @GetMapping
 	public ResponseEntity<Page<CategoryDTO>> findAll(Pageable pageable){
-    	Page<CategoryDTO> list = service.findAllPaged(pageable);
-    	
+    	Page<CategoryDTO> list = service.findAllPaged(pageable);    	
     	return ResponseEntity.ok().body(list);
 	}
     
@@ -57,5 +56,5 @@ public class CategoryResource {
     public ResponseEntity<Void> delete(@PathVariable Long id) {
     	service.delete(id);
     	return ResponseEntity.noContent().build();
-}
+    }
 }
