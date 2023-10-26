@@ -62,8 +62,8 @@ public class ProductRepositoryTests {
 	@Test
 	public void findByIdShouldReturnNonEmptyOptionalWhenIdExist() {
 		
-		Optional<Product> result = repository.findById(existingId);
-		Assertions.assertTrue(result.isPresent());
+	Optional<Product> result = repository.findById(existingId);
+	Assertions.assertTrue(result.isPresent());
 	}
 	
 	@Test

@@ -18,6 +18,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
@@ -139,7 +140,7 @@ public class ProductServiceTests {
 			service.delete(existingId);
 		});
 		
-		verify(repository, times(1)).deleteById(existingId);
+		Mockito.verify(repository, times(1)).deleteById(existingId);
 	}
 	
 	@Test
